@@ -18,7 +18,7 @@ function Point2D(x, y) {
 When the `Point2D` function is declared, a default property called `prototype` will be created for it (note that in JavaScript, a function is also an object). The `prototype` property is an object that contains a `constructor` property, and its value is the `Point2D` function: `Point2D.prototype.constructor = Point2D`. And when you call `Point2D` with the reserved word `new`, the newly created objects will inherit all properties from `Point2D.prototype`. To verify this, you can add a method called `move` to `Point2D.prototype` as follows:
 
 ```javascript
-javascriptCopy codePoint2D.prototype.move = function(dx, dy) {
+Point2D.prototype.move = function(dx, dy) {
   this.x += dx;
   this.y += dy;
 };
@@ -49,7 +49,7 @@ The mechanism of the prototype chain is simple: when you access a property `p` o
 In ES2016, we can now use the `class` keyword, as well as the previously mentioned methods to manipulate the `prototype`. JavaScript classes are attractive to developers with experience in object-oriented programming, but they essentially do the same as before.
 
 ```javascript
-javascriptCopy codeclass Rectangle {
+class Rectangle {
   constructor(height, width) {
     this.height = height;
     this.width = width;
@@ -72,7 +72,7 @@ console.log(square.area); // 100
 This is basically the same as:
 
 ```javascript
-javascriptCopy codefunction Rectangle(height, width) {
+function Rectangle(height, width) {
   this.height = height;
   this.width = width;
 }

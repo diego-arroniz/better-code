@@ -8,9 +8,8 @@ The Iterator pattern can help you isolate the iteration and processing logic of 
 
 Here is how you can use it on a fairly basic list with multiple types of items:
 
-```javascript
-javascriptCopy codefunction Iterator(list) { 
-   this.list = list; 
+<pre class="language-javascript"><code class="lang-javascript"><strong>function Iterator(list) { 
+</strong>   this.list = list; 
    this.index = 0;
 
    this.current = function() { 
@@ -22,7 +21,7 @@ javascriptCopy codefunction Iterator(list) {
    };
 
    this.hasNext = function() { 
-       return this.index < this.list.length; 
+       return this.index &#x3C; this.list.length; 
    };
 
    this.resetIndex = function() { 
@@ -30,7 +29,7 @@ javascriptCopy codefunction Iterator(list) {
    };
 
    this.forEach = function(callback) { 
-       for (let element = this.next(); this.index <= this.list.length; element = this.next()) { 
+       for (let element = this.next(); this.index &#x3C;= this.list.length; element = this.next()) { 
            callback(element); 
        } 
    };
@@ -70,7 +69,7 @@ function run() {
 }
 
 run();
-```
+</code></pre>
 
 Needless to say, this pattern can be unnecessarily complex for lists without multiple types of elements. Additionally, if there are too many types of elements in a list, it can also become difficult to manage.
 

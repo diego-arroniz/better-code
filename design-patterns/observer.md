@@ -9,7 +9,7 @@ Instead of allowing each object to communicate with each other through a designa
 Here is a simple demonstration of how to send newsletters to multiple people through the Observer pattern:
 
 ```javascript
-javascriptCopy codefunction Newsletter() {
+function Newsletter() {
     this.subscribers = [];
 
     this.subscribe = function(subscriber) {

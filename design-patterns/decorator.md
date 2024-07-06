@@ -9,7 +9,7 @@ From a technical point of view, there is no inheritance, so there is greater fre
 In the following example, you'll see how the Decorator pattern helps add more functions to a standard `Customer` class:
 
 ```javascript
-javascriptCopy codefunction Customer(name, age) { 
+function Customer(name, age) { 
    this.name = name; 
    this.age = age;
 

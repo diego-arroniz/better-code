@@ -8,9 +8,25 @@ Names are everywhere in software. We name our variables, our functions, our argu
 
 It is easy to say that names should reveal intent. What we want to impress upon you is that we are serious about this. Choosing good names takes time but saves more than it takes. So take care with your names and change them when you find better ones. Everyone who reads your code (including you) will be happier if you do. The name of a variable, function, or class, should answer all the big questions. It should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent.
 
+```
+int d; // elapsed time in days
+```
+
 The name `d` reveals nothing. It does not evoke a sense of elapsed time, nor of days. We should choose a name that specifies what is being measured and the unit of that measurement:
 
+```
+int elapsedTimeInDays;
+int daysSinceCreation;
+int daysSinceModification;
+if (daysSinceModification < elapsedTimeInDays) {
+    // Do something
+}
+
+```
+
 Choosing names that reveal intent can make it much easier to understand and change code. What is the purpose of this code?
+
+<figure><img src=".gitbook/assets/image (25).png" alt="" width="350"><figcaption></figcaption></figure>
 
 Why is it hard to tell what this code is doing? There are no complex expressions. Spacing and indentation are reasonable. There are only three variables and two constants mentioned. There aren’t even any fancy classes or polymorphic methods, just a list of arrays (or so it seems). The problem isn’t the simplicity of the code but the implicity of the code (to coin a phrase): the degree to which the context is not explicit in the code itself. The code implicitly requires that we know the answers to questions such as:
 
@@ -23,11 +39,21 @@ The answers to these questions are not present in the code sample, but they coul
 
 Each cell on the board is represented by a simple array. We further find that the zeroth subscript is the location of a status value and that a status value of 4 means “flagged.” Just by giving these concepts names we can improve the code considerably:
 
+<figure><img src=".gitbook/assets/image (26).png" alt="" width="398"><figcaption></figcaption></figure>
+
 Notice that the simplicity of the code has not changed. It still has exactly the same number of operators and constants, with exactly the same number of nesting levels. But the code has become much more explicit.
 
 ### Avoid Disinformation
 
 Programmers must avoid leaving false clues that obscure the meaning of code. We should avoid words whose entrenched meanings vary from our intended meaning. Do not refer to a grouping of accounts as an `accountList` unless it’s actually a List. The word list means something specific to programmers. If the container holding the accounts is not actually a List, it may lead to false conclusions. So `accountGroup` or `bunchOfAccounts` or just plain `accounts` would be better. Beware of using names which vary in small ways. How long does it take to spot the subtle difference between a `XYZControllerForEfficientHandlingOfStrings` in one module and, somewhere a little more distant, `XYZControllerForEfficientStorageOfStrings`? The words have frightfully similar shapes. A truly awful example of disinformative names would be the use of lower-case `l` or uppercase `O` as variable names, especially in combination. The problem, of course, is that they look almost entirely like the constants one and zero, respectively.
+
+```
+int a = l;
+if (0 === 1)
+    a = O1;
+else
+    l = 01
+```
 
 ### Class Names
 

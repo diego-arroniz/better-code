@@ -7,7 +7,7 @@ The Factory method is also one of the most popular design patterns. The problem 
 Here's how you can implement it in JavaScript:
 
 ```javascript
-javascriptCopy codefunction Factory() { 
+function Factory() { 
    this.createDog = function (breed) { 
        let dog; 
 

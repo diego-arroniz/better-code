@@ -42,16 +42,24 @@ Memory usage is higher than arrays due to the storage of pointers.
 
 There are three types of linked lists:
 
-1. **Singly Linked Lists:** Each node contains only one pointer to the next node. This is what we have been talking about so far.
-2. **Doubly Linked Lists:** Each node contains two pointers; one to the next node and another to the previous node.
-3. **Circular Linked Lists:** A variation of the linked list where the last node points to the first node or another node before it, thus forming a loop.
+* **Singly Linked Lists:** Each node contains only one pointer to the next node. This is what we have been talking about so far.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+* **Doubly Linked Lists:** Each node contains two pointers; one to the next node and another to the previous node.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* **Circular Linked Lists:** A variation of the linked list where the last node points to the first node or another node before it, thus forming a loop.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Implementation of a List Node in JavaScript
 
 As mentioned earlier, a list node contains two items, the data and the pointer to the next node. We can implement a list node in JavaScript as follows:
 
 ```javascript
-javascriptCopy codeclass ListNode {
+class ListNode {
   constructor(data) {
     this.data = data;
     this.next = null;
@@ -78,7 +86,7 @@ class LinkedList {
 A class representing a node, it will have two properties, the value property representing the data of interest to be stored, and the next property representing a pointer to the next element in the list.
 
 ```javascript
-javascriptCopy codeclass Node {
+class Node {
   constructor(value, next) {
     this.value = value;
     this.next = next;
@@ -95,7 +103,7 @@ The following steps will add methods to the LinkedList class to help us manipula
 We will start with a basic method for inserting nodes into our linked list.
 
 ```javascript
-javascriptCopy codeinsertNode(value) {
+insertNode(value) {
   const newNode = new Node(value, null);
   if (this.head === null) {
     this.head = newNode;
@@ -122,7 +130,7 @@ In the previous code snippet:
 We will continue with a basic method to print the value of each node to the console.
 
 ```javascript
-javascriptCopy codeprint() {
+print() {
   let current = this.head;
   while (current) {
     console.log(current.value);
@@ -140,7 +148,7 @@ In the previous code snippet:
 We will continue with a basic method to search for elements based on their value. This time we will return the first match.
 
 ```javascript
-javascriptCopy codefindNode(value) {
+findNode(value) {
   let current = this.head;
   while (current) {
     if (current.value === value) {
@@ -164,7 +172,7 @@ In the previous code snippet:
 We will continue with a basic method for deleting elements based on their value.
 
 ```javascript
-javascriptCopy codedeleteNode(value) {
+deleteNode(value) {
   if (this.head.value === value) {
     this.head = this.head.next;
   } else {
@@ -188,7 +196,7 @@ In the previous code snippet:
 **Complete Code**
 
 ```javascript
-javascriptCopy codeclass Node {
+class Node {
   constructor(value, next) {
     this.value = value;
     this.next = next;

@@ -4,6 +4,8 @@
 
 Trees are data structures that link nodes in a parent/child relationship, meaning there are nodes that depend on or come off other nodes.
 
+<figure><img src="../.gitbook/assets/image (5).png" alt="" width="295"><figcaption></figcaption></figure>
+
 Trees are formed by a root node (the first node on the tree), and all the nodes that come off that root are called children. The nodes at the bottom of the tree, which have no "descendants", are called leaf nodes. The height of the tree is determined by the number of parent/child connections it has.
 
 Unlike linked lists or arrays, trees are non-linear, meaning when iterating the tree, the program flow can follow different directions within the data structure and hence arrive at different values. In linked lists or arrays, the program can only iterate the data structure from one end to the other, always following the same path.
@@ -24,11 +26,15 @@ There are many different types of trees. In each type, values may be organized f
 
 Binary trees are a type of tree in which each node has a maximum of two children.
 
+<figure><img src="../.gitbook/assets/image (6).png" alt="" width="375"><figcaption></figcaption></figure>
+
 One key situation in which binary trees are really useful is in searching. For searching, a certain type of binary tree is used, called binary search trees (BSTs).
 
 BSTs are just like binary trees but the information within them is ordered in a way that makes them a suitable data structure for searching.
 
 In BST, values are ordered so that each node that descends to the left side of its parent must have a value less than its parent, and each node that descends to the right side of its parent must have a value greater than its parent.
+
+<figure><img src="../.gitbook/assets/image (7).png" alt="" width="213"><figcaption></figcaption></figure>
 
 This order in its values makes this data structure great for searching since at every level of the tree we can identify if the value being looked for is greater or less than the parent node, and from that comparison progressively discard roughly half of the data until we reach our value.
 
@@ -134,7 +140,7 @@ JavaScript has a concurrency model based on an "event loop". This model is quite
 Function calls form a stack of frames. A frame encapsulates information such as the context and local variables of a function.
 
 ```javascript
-javascriptCopy codefunction f(b) {
+function f(b) {
   var a = 12;
   return a + b + 35;
 }
@@ -162,7 +168,7 @@ A JavaScript runtime contains a message queue, which is a list of messages to be
 The event loop gets its name by the way it is usually implemented, which generally resembles:
 
 ```javascript
-javascriptCopy codewhile (queue.waitForMessage()) {
+while (queue.waitForMessage()) {
   queue.processNextMessage();
 }
 ```

@@ -9,7 +9,7 @@ First, you create a prototype object, which can be cloned multiple times to crea
 In the following example, you'll see how you can use the Prototype pattern to create new documents based on an established template document:
 
 ```javascript
-javascriptCopy codefunction Document() { 
+function Document() { 
    this.header = "Acme Co";
    this.footer = "For internal use only";
    this.pages = 2;

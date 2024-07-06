@@ -6,14 +6,7 @@ Versioning objects is another common problem you will encounter when developing 
 
 The Memento design pattern is intended to solve this problem easily.
 
-A memento is considered a snapshot of an object at a certain point in time. The Memento design pattern uses these mementos to preserve snapshots of the object as it is modified over time. When
-
-4oalmost there continue with the restChatGPT
-
-Continuing with the rest of the Memento pattern example and the remaining design patterns translated to English and formatted in Markdown:
-
-````markdown
-markdownCopy codeThe Memento design pattern uses these mementos to preserve snapshots of the object as it is modified over time. When you need to revert to a previous version, you simply retrieve the corresponding memento.
+A memento is considered a snapshot of an object at a certain point in time. The Memento design pattern uses these mementos to preserve snapshots of the object as it is modified over time.  The Memento design pattern uses these mementos to preserve snapshots of the object as it is modified over time. When you need to revert to a previous version, you simply retrieve the corresponding memento.
 
 Here's how you can implement it in a text processing application:
 
@@ -166,7 +159,7 @@ function run() {
 }
 
 run();
-````
+```
 
 Although the Memento design pattern is a great solution for managing an object's history, it can become resource-intensive. Since each memento is almost a copy of the object, it can inflate your application's memory very quickly if not used sparingly.
 

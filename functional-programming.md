@@ -68,7 +68,7 @@ When you follow the rule of never changing the state, your code becomes referent
 As a simple example to verify if your code is referentially transparent, look at the following code snippet:
 
 ```javascript
-javascriptCopy codeconst greetAuthor = function() {
+const greetAuthor = function() {
   return 'Hello Kealan';
 };
 ```
@@ -90,7 +90,7 @@ It can help you better understand the flow, understand what a function is doing 
 In JavaScript, a function can call itself.
 
 ```javascript
-javascriptCopy codefunction recur(start, end) {
+function recur(start, end) {
   if (start === end) {
     console.log(end);
     return;
@@ -115,7 +115,7 @@ There are also certain data structures (tree structures) that are more efficient
 Currying is another tool widely used in functional code. The arity of a function refers to how many arguments it receives.
 
 ```javascript
-javascriptCopy code// Let's look at arity
+// Let's look at arity
 function arity2(arg1, arg2) {}             // Function has an arity of 2
 function arity0() {}                       // Function has an arity of 0
 function arity4(arg1, arg2, arg3, arg4) {} // Function has an arity of 4
@@ -124,7 +124,7 @@ function arity4(arg1, arg2, arg3, arg4) {} // Function has an arity of 4
 Currying a function converts this function that has an arity of more than 1 into a function of arity 1. It does this by returning an inner function to take the next argument. Here is an example:
 
 ```javascript
-javascriptCopy codefunction sum(firstNum, secondNum) {
+function sum(firstNum, secondNum) {
   return firstNum + secondNum;
 }
 
@@ -143,7 +143,7 @@ Essentially, it restructures a function to take one argument, but then returns a
 The big benefit of currying is when you need to reuse the same function multiple times, but only change one (or fewer) of the parameters. Then you can save the first call to the function, something like this:
 
 ```javascript
-javascriptCopy codefunction currySum(firstNum) {
+function currySum(firstNum) {
   return function(secondNum) {
     return firstNum + secondNum;
   };
@@ -165,7 +165,7 @@ It's also useful if you can't provide all the arguments to a function at once. Y
 Similarly, partial application means you apply some arguments to a function at a time and return another function that applies more arguments. This is the best example I found in the MDN documentation:
 
 ```javascript
-javascriptCopy codeconst module = {
+const module = {
   height: 42,
   calculateHeight: function(height) {
     return this.height + height;
@@ -196,7 +196,7 @@ You can use partial application whenever you can't pass all its arguments at onc
 Function composition allows us to take two or more functions and turn them into a single function that does exactly what the two (or more) functions do.
 
 ```javascript
-javascriptCopy code// If we have these two functions
+// If we have these two functions
 function add10(num) {
   return num + 10;
 }

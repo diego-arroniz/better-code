@@ -13,7 +13,7 @@ The Adapter design pattern provides an abstraction that bridges the methods and 
 Here's an example:
 
 ```javascript
-javascriptCopy codefunction Robot() { 
+function Robot() { 
    this.walk = function(numberOfSteps) { 
        console.log("walked " + numberOfSteps + " steps"); 
    };

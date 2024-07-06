@@ -7,7 +7,7 @@ The Proxy pattern helps you substitute one object for another. In other words, p
 In the following example, you'll see how access to a database instance is controlled via a proxy that performs some basic validation checks on requests before allowing them to pass:
 
 ```javascript
-javascriptCopy codefunction DatabaseHandler() { 
+function DatabaseHandler() { 
    const data = {};
 
    this.set = function(key, val) { 

@@ -42,6 +42,8 @@ Testing is the process of executing a program to find errors. To make our softwa
 9. Security Testing
 10. User Acceptance Testing
 
+<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+
 #### Unit Testing
 
 Unit testing is a method of testing individual units or components of a software application. It is typically done by developers and is used to ensure that the individual units of the software are working as intended. Unit tests are usually automated and are designed to test specific parts of the code, such as a particular function or method. Unit testing is done at the lowest level of the software development process, where individual units of code are tested in isolation.

@@ -7,7 +7,7 @@ The Builder pattern is one of the more complex and flexible creational design pa
 In the intricate example below, you'll see the Builder design pattern in action with a Director to help make pizzas!
 
 ```javascript
-javascriptCopy codefunction PizzaBuilder() { 
+function PizzaBuilder() { 
    let base; 
    let sauce; 
    let cheese; 

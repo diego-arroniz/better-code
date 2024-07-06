@@ -15,7 +15,7 @@ The system is designed so that at the end of processing in one state, it updates
 Here's how to create a task management system using the State design pattern:
 
 ```javascript
-javascriptCopy codeconst STATE_TODO = "TODO";
+const STATE_TODO = "TODO";
 const STATE_IN_PROGRESS = "IN_PROGRESS";
 const STATE_READY_FOR_REVIEW = "READY_FOR_REVIEW";
 const STATE_DONE = "DONE";

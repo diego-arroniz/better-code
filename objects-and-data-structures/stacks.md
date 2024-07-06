@@ -8,6 +8,8 @@ A real-life example of using a Stack could be a stack of books placed in a verti
 
 Below you can find an image of a stack containing 3 data elements (1, 2, and 3), where 3 is on top and will be removed first:
 
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="375"><figcaption></figcaption></figure>
+
 #### Basic Stack Operations
 
 * **Push** — Inserts an element at the top.

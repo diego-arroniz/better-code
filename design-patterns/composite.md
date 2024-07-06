@@ -9,7 +9,7 @@ It makes more sense to use the Composite pattern when your data model resembles 
 In the following example, you'll see how you can use the Composite design pattern to build a packaging system for e-commerce products that can also calculate the total order value per package:
 
 ```javascript
-javascriptCopy codefunction Product(name, price) { 
+function Product(name, price) { 
    this.name = name; 
    this.price = price;
 

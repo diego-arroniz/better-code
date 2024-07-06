@@ -2,11 +2,12 @@
 
 ## Objects and Data Structures
 
-1. [linked-list.md](linked-list.md "mention")
-2. [hash-table.md](hash-table.md "mention")
-3. [stacks.md](stacks.md "mention")
-4. [queues.md](queues.md "mention")
-5. [trees.md](trees.md "mention")
+1. [Linked List](linked-list.md)
+2. [Hash Table](hash-table.md)
+3. [Stacks](stacks.md)
+4. [Queues](queues.md)
+5. [Trees](trees.md)
+6. [Event Loop](event-loop.md)
 
 #### Sources:
 

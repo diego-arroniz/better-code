@@ -8,6 +8,8 @@ A perfect real-life example of a Queue: a line of people waiting at a ticket cou
 
 Below is an image of a Queue containing four data elements (1, 2, 3, and 4), where 1 is at the beginning and will be removed first:
 
+<figure><img src="../.gitbook/assets/image (4).png" alt="" width="316"><figcaption></figcaption></figure>
+
 #### Basic Queue Operations
 
 * **Enqueue** — Inserts an element at the end of the queue.

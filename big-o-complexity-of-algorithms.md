@@ -32,7 +32,11 @@ An algorithm's time complexity specifies how long it will take to execute an alg
 
 To perfectly grasp the concept of "as a function of input size," imagine you have an algorithm that computes the sum of numbers based on your input. If your input is 4, it will add 1+2+3+4 to output 10; if your input is 5, it will output 15 (meaning 1+2+3+4+5).
 
+<figure><img src=".gitbook/assets/image (8).png" alt="" width="203"><figcaption></figcaption></figure>
+
 In the code above, we have three statements:
+
+<figure><img src=".gitbook/assets/image (9).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Looking at the image above, we only have three statements. Still, because there is a loop, the second statement will be executed based on the input size, so if the input is four, the second statement (statement 2) will be executed four times, meaning the entire algorithm will run six (4 + 2) times.
 
@@ -57,6 +61,8 @@ This helps programmers identify and fully understand the worst-case scenario and
 
 The following graph illustrates Big O complexity:
 
+<figure><img src=".gitbook/assets/image (10).png" alt="" width="375"><figcaption></figcaption></figure>
+
 The Big O chart above shows that O(1), which stands for constant time complexity, is the best. This implies that your algorithm processes only one statement without any iteration. Then there's O(log n), which is good, and others like it, as shown below:
 
 * O(1) - Excellent/Best
@@ -77,9 +83,13 @@ When your algorithm is not dependent on the input size n, it is said to have a c
 
 For example, if an algorithm is to return the first element of an array. Even if the array has 1 million elements, the time complexity will be constant if you use this approach:
 
+<figure><img src=".gitbook/assets/image (11).png" alt="" width="206"><figcaption></figcaption></figure>
+
 The function above will require only one execution step, meaning the function is in constant time with time complexity O(1).
 
 But as I said earlier, there are various ways to achieve a solution in programming. Another programmer might decide to first loop through the array before returning the first element.
+
+<figure><img src=".gitbook/assets/image (12).png" alt="" width="216"><figcaption></figcaption></figure>
 
 If there is a loop, this is no longer constant time but now linear time with the time complexity O(n).
 
@@ -88,6 +98,8 @@ If there is a loop, this is no longer constant time but now linear time with the
 You get linear time complexity when the running time of an algorithm increases linearly with the size of the input. This means that when a function has a loop that iterates over an input size of n, it is said to have a time complexity of order O(n).
 
 For example, if an algorithm is to return the factorial of any input number. This means if you input 5 then you are to loop through and multiply 1 by 2 by 3 by 4 and by 5 and then output 120:
+
+<figure><img src=".gitbook/assets/image (13).png" alt="" width="181"><figcaption></figcaption></figure>
 
 The fact that the runtime depends on the input size means that the time complexity is linear with the order O(n).
 
@@ -101,6 +113,8 @@ A great example is binary search functions, which divide your sorted array based
 
 For example, suppose you use a binary search algorithm to find the index of a given element in an array:
 
+<figure><img src=".gitbook/assets/image (15).png" alt="" width="296"><figcaption></figcaption></figure>
+
 In the code above, since it is a binary search, you first get the middle index of your array, compare it to the target value, and return the middle index if it is equal. Otherwise, you must check if the target value is greater or less than the middle value to adjust the first and last index, reducing the input size by half.
 
 Because for every iteration the input size reduces by half, the time complexity is logarithmic with the order O(log n).
@@ -113,6 +127,8 @@ A perfect way to explain this would be if you have an array with n items. The ou
 
 Here is an example where you compare each element in an array to output the index when two elements are similar:
 
+<figure><img src=".gitbook/assets/image (16).png" alt="" width="365"><figcaption></figcaption></figure>
+
 In the example above, there is a nested loop, meaning that the time complexity is quadratic with the order O(n^2).
 
 #### Exponential Time: O(2^n)
@@ -124,5 +140,7 @@ The recursive Fibonacci sequence is a good example. Assume you're given a number
 The Fibonacci sequence is a mathematical sequence in which each number is the sum of the two preceding numbers, where 0 and 1 are the first two numbers. The third number in the sequence is 1, the fourth is 2, the fifth is 3, and so on... (0, 1, 1, 2, 3, 5, 8, 13, …).
 
 This means that if you pass in 6, then the 6th element in the Fibonacci sequence would be 8:
+
+<figure><img src=".gitbook/assets/image (17).png" alt="" width="299"><figcaption></figcaption></figure>
 
 In the code above, the algorithm specifies a growth rate that doubles every time the input data set is added. This means the time complexity is exponential with an order O(2^n).
